@@ -1,53 +1,52 @@
 export const Users = [
   {
-    id:1,
-    profilePicture: "",
+    id: 1,
+    profilePicture: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     username: "Safak Kocaoglu",
   },
   {
-    id:2,
-    profilePicture: "",
+    id: 2,
+    profilePicture: "https://plus.unsplash.com/premium_photo-1689977968861-9c91dbb16049?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     username: "Janell Shrum",
   },
   {
-    id:3,
-    profilePicture: "",
+    id: 3,
+    profilePicture: "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     username: "Alex Durden",
   },
   {
-    id:4,
-    profilePicture: "",
+    id: 4,
+    profilePicture: "https://images.unsplash.com/photo-1532074205216-d0e1f4b87368?q=80&w=1941&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     username: "Dora Hawks",
   },
   {
-    id:5,
-    profilePicture: "",
-   
+    id: 5,
+    profilePicture: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     username: "Thomas Holden",
   },
   {
-    id:6,
-    profilePicture: "",
+    id: 6,
+    profilePicture: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     username: "Shirley Beauchamp",
   },
   {
-    id:7,
-    profilePicture: "",
+    id: 7,
+    profilePicture: "https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     username: "Travis Bennett",
   },
   {
-    id:8,
-    profilePicture: "",
+    id: 8,
+    profilePicture: " https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     username: "Kristen Thomas",
   },
   {
-    id:9,
-    profilePicture: "",
+    id: 9,
+    profilePicture: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     username: "Gary Duty",
   },
   {
-    id:10,
-    profilePicture: "",
+    id: 10,
+    profilePicture: "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     username: "Safak Kocaoglu",
   },
 ];
@@ -56,7 +55,7 @@ export const Posts = [
   {
     id: 1,
     desc: "Love For All, Hatred For None.",
-    photo: "",
+    photo: "https://images.unsplash.com/photo-1580119063343-355cba8ca89e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: "5 mins ago",
     userId: 1,
     like: 32,
@@ -64,7 +63,8 @@ export const Posts = [
   },
   {
     id: 2,
-    photo: "",
+    desc: "Having a great time with friends!",
+    photo: "https://cdn.pixabay.com/photo/2017/01/14/10/56/people-1979261_1280.jpg",
     date: "15 mins ago",
     userId: 2,
     like: 2,
@@ -73,7 +73,7 @@ export const Posts = [
   {
     id: 3,
     desc: "Every moment is a fresh beginning.",
-    photo: "",
+    photo: "https://cdn.pixabay.com/photo/2019/07/20/20/11/nature-4351455_1280.jpg",
     date: "1 hour ago",
     userId: 3,
     like: 61,
@@ -81,7 +81,8 @@ export const Posts = [
   },
   {
     id: 4,
-    photo: "",
+    desc: "Beautiful sunset today!",
+    photo: "https://plus.unsplash.com/premium_photo-1673002094195-f18084be89ce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: "4 hours ago",
     userId: 4,
     like: 7,
@@ -89,7 +90,8 @@ export const Posts = [
   },
   {
     id: 5,
-    photo: "",
+    desc: "Working on some new projects.",
+    photo: "https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?q=80&w=2057&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: "5 hours ago",
     userId: 5,
     like: 23,
@@ -97,7 +99,8 @@ export const Posts = [
   },
   {
     id: 6,
-    photo: "",
+    desc: "Amazing conference today!",
+    photo: "https://plus.unsplash.com/premium_photo-1741631767690-f68d3b6574aa?q=80&w=2034&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: "1 day ago",
     userId: 6,
     like: 44,
@@ -106,7 +109,7 @@ export const Posts = [
   {
     id: 7,
     desc: "Never regret anything that made you smile.",
-    photo: "",
+    photo: "https://images.unsplash.com/photo-1634219355134-47e8e0727e80?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: "2 days ago",
     userId: 7,
     like: 52,
@@ -114,7 +117,8 @@ export const Posts = [
   },
   {
     id: 8,
-    photo: "",
+    desc: "Exploring the city!",
+    photo: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2144&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: "3 days ago",
     userId: 8,
     like: 15,
@@ -123,7 +127,7 @@ export const Posts = [
   {
     id: 9,
     desc: "Change the world by being yourself.",
-    photo: "",
+    photo: "https://cdn.pixabay.com/photo/2023/04/20/12/22/globe-7939725_1280.jpg",
     date: "5 days ago",
     userId: 9,
     like: 11,
@@ -131,7 +135,8 @@ export const Posts = [
   },
   {
     id: 10,
-    photo: "a",
+    desc: "What an incredible journey!",
+    photo: "https://cdn.pixabay.com/photo/2019/09/04/11/39/dam-4451353_1280.jpg",
     date: "1 week ago",
     userId: 10,
     like: 104,

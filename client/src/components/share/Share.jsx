@@ -1,12 +1,13 @@
 import "./share.css";
 import {PermMedia, Label,Room, EmojiEmotions} from "@material-ui/icons"
+import profilePicture from "../../assets/profile.jpeg";
 
 export default function Share() {
   return (
     <div className="share">
       <div className="shareWrapper">
         <div className="shareTop">
-          <img className="shareProfileImg" src="/assets/person/1.jpeg" alt="" />
+          <img className="shareProfileImg" src= {profilePicture} alt="" />
           <input
             placeholder="What's in your mind Safak?"
             className="shareInput"

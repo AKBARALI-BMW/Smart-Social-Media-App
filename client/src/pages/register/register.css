@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .loginWrapper {
@@ -43,11 +44,12 @@
 }
 
 .loginInput{
-    height: 50px;
+    height: 38px;
     border-radius: 10px;
     border: 1px solid gray;
-    font-size: 18px;
+    font-size: 14px;
     padding-left: 20px;
+    margin-bottom: 3px;
 }
 
 .loginInput:focus{

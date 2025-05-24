@@ -1,0 +1,186 @@
+/* Additional styles for authentication components */
+
+/* Error and Success Messages */
+.errorMessage {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.errorIcon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.successMessage {
+  background: linear-gradient(135deg, #51cf66, #40c057);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(81, 207, 102, 0.3);
+}
+
+.successIcon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Input Validation Styles */
+.inputGroup {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.loginInput.error {
+  border: 2px solid #ff6b6b;
+  background-color: #fff5f5;
+}
+
+.loginInput.error:focus {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+.validationError {
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  color: #ff6b6b;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Loading States */
+.loginButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: linear-gradient(135deg, #ccc, #999);
+}
+
+.loginButton:disabled:hover {
+  transform: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.loginHeader {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.loginHeader h2 {
+  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.loginHeader p {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+.registerHeader h2 {
+  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.registerHeader p {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Form Styling */
+form {
+  width: 100%;
+}
+
+/* Remember Me Checkbox Styling */
+.rememberMe {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
+.rememberMe input[type="checkbox"] {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  accent-color: #1877f2;
+}
+
+.checkmark {
+  margin-left: 4px;
+}
+
+/* Link Styling */
+.loginRegisterButton {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #42a5f5, #1e88e5);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.loginRegisterButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(66, 165, 245, 0.4);
+  text-decoration: none;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .validationError {
+    position: static;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .inputGroup {
+    margin-bottom: 25px;
+  }
+  
+  .errorMessage,
+  .successMessage {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+  
+  .loginHeader h2,
+  .registerHeader h2 {
+    font-size: 24px;
+  }
+  
+  .loginHeader p,
+  .registerHeader p {
+    font-size: 14px;
+  }
+}

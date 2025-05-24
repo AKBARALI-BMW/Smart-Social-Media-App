@@ -2,40 +2,82 @@ const router = require("express").Router();
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 
-//REGISTER
+// REGISTER
 router.post("/register", async (req, res) => {
   try {
-    //generate new password
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(req.body.password, salt);
+    const { username, email, password } = req.body;
 
-    //create new user
+    // Check if user already exists
+    const existingUser = await User.findOne({ 
+      $or: [{ email }, { username }] 
+    });
+    
+    if (existingUser) {
+      return res.status(400).json({ 
+        message: "User with this email or username already exists" 
+      });
+    }
+
+    // Generate new password
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    // Create new user
     const newUser = new User({
-      username: req.body.username,
-      email: req.body.email,
+      username,
+      email,
       password: hashedPassword,
     });
 
-    //save user and respond
+    // Save user and respond
     const user = await newUser.save();
-    res.status(200).json(user);
+    
+    // Remove password from response
+    const { password: userPassword, ...userWithoutPassword } = user._doc;
+    
+    res.status(201).json({
+      message: "User registered successfully",
+      user: userWithoutPassword
+    });
   } catch (err) {
-    res.status(500).json(err)
+    console.error("Registration error:", err);
+    res.status(500).json({ 
+      message: "Registration failed", 
+      error: err.message 
+    });
   }
 });
 
-//LOGIN
+// LOGIN
 router.post("/login", async (req, res) => {
   try {
-    const user = await User.findOne({ email: req.body.email });
-    !user && res.status(404).json("user not found");
+    const { email, password } = req.body;
 
-    const validPassword = await bcrypt.compare(req.body.password, user.password)
-    !validPassword && res.status(400).json("wrong password")
+    // Find user by email
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
 
-    res.status(200).json(user)
+    // Check password
+    const validPassword = await bcrypt.compare(password, user.password);
+    if (!validPassword) {
+      return res.status(400).json({ message: "Invalid password" });
+    }
+
+    // Remove password from response
+    const { password: userPassword, ...userWithoutPassword } = user._doc;
+
+    res.status(200).json({
+      message: "Login successful",
+      user: userWithoutPassword
+    });
   } catch (err) {
-    res.status(500).json(err)
+    console.error("Login error:", err);
+    res.status(500).json({ 
+      message: "Login failed", 
+      error: err.message 
+    });
   }
 });
 

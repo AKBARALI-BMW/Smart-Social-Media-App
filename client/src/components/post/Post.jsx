@@ -2,6 +2,7 @@ import "./post.css";
 import { MoreVert, FavoriteBorder, Favorite } from "@material-ui/icons";
 import { Users } from "../../dummyData";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Post({ post }) {
   const [like, setLike] = useState(post.like);
@@ -21,6 +22,8 @@ export default function Post({ post }) {
         <div className="postTop">
           <div className="postTopLeft">
             <div className="profileImgContainer">
+
+              <Link to={`/profile/${postUser?.username}`}>   
               <img
                 className="postProfileImg"
                 src={
@@ -29,6 +32,7 @@ export default function Post({ post }) {
                 }
                 alt=""
               />
+              </Link>
               <div className="onlineIndicator"></div>
             </div>
             <div className="userInfo">

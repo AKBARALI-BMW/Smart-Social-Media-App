@@ -9,72 +9,72 @@ import Profile from './pages/profile/Profile';
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
   const { user } = useAuth();
+  // Show login page if user is null/undefined
   return user ? children : <Navigate to="/login" replace />;
 };
 
-// Public Route Component (redirect to home if already logged in)
+// Public Route Component
 const PublicRoute = ({ children }) => {
   const { user } = useAuth();
+  // Redirect to home if already logged in
   return !user ? children : <Navigate to="/" replace />;
 };
 
-// Routes Component (needs to be inside AuthContextProvider)
 const AppRoutes = () => {
   return (
     <Router>
       <Routes>
         {/* Public Routes */}
-        <Route 
-          path="/login" 
+        <Route
+          path="/login"
           element={
             <PublicRoute>
               <Login />
             </PublicRoute>
-          } 
+          }
         />
-        <Route 
-          path="/register" 
+        <Route
+          path="/register"
           element={
             <PublicRoute>
               <Register />
             </PublicRoute>
-          } 
+          }
         />
-                
+
         {/* Protected Routes */}
-        <Route 
-          path="/" 
+        <Route
+          path="/"
           element={
             <ProtectedRoute>
               <Home />
             </ProtectedRoute>
-          } 
+          }
         />
-        <Route 
-          path="/home" 
+        <Route
+          path="/home"
           element={
             <ProtectedRoute>
               <Home />
             </ProtectedRoute>
-          } 
+          }
         />
-        <Route 
-          path="/profile/:username" 
+        <Route
+          path="/profile/:username"
           element={
             <ProtectedRoute>
               <Profile />
             </ProtectedRoute>
-          } 
+          }
         />
-                
-        {/* Fallback route */}
+
+        {/* Fallback Route */}
         <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </Router>
   );
 };
 
-// Main App Component
 function App() {
   return (
     <AuthContextProvider>

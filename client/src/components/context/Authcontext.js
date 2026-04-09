@@ -2,8 +2,16 @@ import React, { createContext, useContext, useReducer } from 'react';
 import { AuthReducer } from './AuthReduce';
 
 // Initial state
+const storedUser = (() => {
+  try {
+    return JSON.parse(localStorage.getItem("user"));
+  } catch (err) {
+    return null;
+  }
+})();
+
 const INITIAL_STATE = {
-  user: JSON.parse(localStorage.getItem("user")) || null,
+  user: storedUser || null,
   isFetching: false,
   error: false,
   errorMessage: ""

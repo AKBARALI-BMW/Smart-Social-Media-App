@@ -24,8 +24,10 @@ mongoose.connect(
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
+
+const CLIENT_ORIGINS = (process.env.CLIENT_ORIGINS || "http://localhost:3000,http://localhost:3001").split(",").map(origin => origin.trim());
 app.use(cors({
-  origin: "http://localhost:3000", // Your React app URL
+  origin: CLIENT_ORIGINS,
   credentials: true
 }));
 

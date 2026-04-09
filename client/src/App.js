@@ -10,7 +10,7 @@ import Profile from './pages/profile/Profile';
 const ProtectedRoute = ({ children }) => {
   const { user } = useAuth();
   // Show login page if user is null/undefined
-  return user ? children : <Navigate to="/login" replace />;
+  return user ? children : <Navigate to="/" replace />;
 };
 
 // Public Route Component
@@ -25,7 +25,7 @@ const AppRoutes = () => {
     <Router>
       <Routes>
         {/* Public Routes */}
-        <Route
+        {/* <Route
           path="/login"
           element={
             <PublicRoute>
@@ -40,7 +40,7 @@ const AppRoutes = () => {
               <Register />
             </PublicRoute>
           }
-        />
+        /> */}
 
         {/* Protected Routes */}
         <Route
@@ -69,7 +69,7 @@ const AppRoutes = () => {
         />
 
         {/* Fallback Route */}
-        <Route path="*" element={<Navigate to="/login" replace />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );

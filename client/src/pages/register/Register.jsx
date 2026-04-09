@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../../components/context/Authcontext";
 import { registerCall } from "../../components/context/AuthAction";
@@ -14,8 +14,14 @@ export default function Register() {
   
   const [validationErrors, setValidationErrors] = useState({});
     
-  const { isFetching, error, errorMessage, dispatch } = useAuth();
+  const { user, isFetching, error, errorMessage, dispatch } = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
 
   const validateForm = () => {
     const errors = {};
